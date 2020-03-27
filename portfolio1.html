@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<style id="webmakerstyle">
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
+  max-width:2000px;
+  font-family:serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.top-photo{
+  width:100%;
+  height:400px;
+  background-image:url("https://cdn.pixabay.com/photo/2017/01/12/14/22/coffee-1974841_960_720.jpg");
+  background-size:cover;
+}
+
+.title{
+  color:white;
+  font-size:40px;
+  font-weight:700;
+  text-align:center;
+  line-height:350px;
+  display:none;
+}
+
+header{
+  width:100%;
+  background-color:rgba(0,0,0,0.7);
+}
+
+.header-scroll{
+  position:fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.header-list{
+  display:flex;
+  justify-content:center;
+}
+
+.list{
+  display:flex;
+}
+
+.ablock{
+  font-size:20px;
+  padding:6px 15px;
+  margin:0px 20px 0px 20px;
+  color:white;
+  transition:all 0.4s;
+}
+
+.ablock:hover{
+  opacity:0.5;
+  text-decoration: underline; /* アンダーラインをつける */
+}
+
+.self-introduction{
+  width:100%;
+  height:500px;
+  background-color:#413E40;
+  color:white;
+  font-family:sans-serif;
+}
+
+#profile{
+  text-align:center;
+  padding-top:100px;
+}
+
+#first{
+  padding:10px 0px 30px 0px;
+  font-family:'arial black';
+  font-weight:800;
+}
+
+.contents{
+  padding:50px 0px 50px 0px;
+  text-align:center;
+}
+
+.skill{
+  background-color:#322E31;
+  padding:100px 0px 100px 0px;
+  color:white;
+}
+
+.skill-contents{
+  width:100%;
+  padding:30px 0px 40px 0px;
+  text-align:center;
+  margin:0 auto;
+}
+
+.skill-contents h2{
+  padding:20px 0px 20px 0px;
+  font-family:'arial black';
+}
+
+.skill-title{
+  padding:10px 0px 10px 0px;
+}
+
+.portfolio{
+  width:100%;
+  background-color:#4C6C6C;
+  color:#FEF6BF;
+}
+
+#portfolio-title{
+  width:100%;
+  padding:70px 0px 50px 0px;
+  text-align:center;
+  font-family:'arial black';
+}
+
+.folio{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  padding:100px 0px 100px 0px;
+}
+
+.sec{
+  text-align:center;
+}
+
+.sec a{
+  background-color:#EDF0B9;
+}
+
+#pho1{
+  width:400px;
+  height:200px;
+  text-align:center;
+}
+
+#pho1:hover{
+  opacity:0.7;
+}
+
+.sec{
+  display:inline-block;
+  margin:0 auto;
+}
+
+.contact{
+  width:100%;
+  padding:100px 0px 100px 0px;
+  background-color:#F0D0A3;
+}
+
+.contact-title{
+  width:100%;
+  text-align:center;
+  padding:50px 0px 50px 0px;
+}
+
+.contact-title h2{
+  font-family:'arial black';
+}
+
+.contact-title p{
+  padding:20px 0px 20px 0px;
+}
+
+.top-btn{
+  width:100%;
+  background-color:#FA66A3;
+  color:#000000;
+}
+
+#topbtn{
+  display:block;
+  width:100px;
+  padding:40px;
+  border-radius:4px;
+  background-color:#5CAD4A;
+  margin:0 auto;
+  text-align:center;
+}
+
+footer{
+  width:100%;
+  background-color:rgba(0,0,0,0.7);
+  text-align:center;
+}
+
+footer p{
+  color:white;
+  font-size:10px;
+  padding:20px 0px 20px 0px;
+}
+
+.footer-list{
+  display:flex;
+  justify-content:space-around;
+  padding:25px 5px 5px 5px;
+  font-size:15px;
+}
+
+.footer-list li a{
+  color:white;
+}
+
+.far,.fas{
+  padding-right:5px;
+}
+
+@media(max-width:738px){
+  .title{
+    font-size:25px;
+  }
+  
+  .ablock{
+    font-size:15px;
+    margin:0px 10px 0px 10px;
+  }
+  
+  .contents{
+    margin-right:5%;
+  }
+  
+  #pho1{
+    padding-left:20px;
+  }
+  
+}
+</style>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/portfolio_css.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+  
+  <body>
+  
+  <div class="top-photo" id="top-font">
+    
+    <h1 class="title">Yamayama Kou's Portfolio</h1>
+    
+  </div>
+  
+  <header id="fixed">
+    
+    <div class="header-list">
+      
+      <ul class="list">
+        <li><a class="ablock" href="#profile"><i class="far fa-file-alt"></i>PROFILE</a></li>
+        <li><a class="ablock" href="#skill"><i class="fas fa-wrench"></i>SKILL</a></li>
+        <li><a class="ablock" href="#portfolio"><i class="far fa-address-card"></i>PORTFOLIO</a></li>
+        <li><a class="ablock" href="#contact"><i class="fas fa-envelope"></i>CONTACT</a></li>
+      </ul>
+      
+    </div>
+    
+  </header>
+  
+  <div class="self-introduction">
+    
+    <div id="profile">
+      
+      <a name="profile"></a>
+      <h1>PLOFILE</h1>
+      
+    </div>
+    
+    <div class="contents">
+      
+      <div class="self-intro">
+    
+        <h2 id="first">はじめまして、yamayamakouと申します。</h2>
+        <p>Web関連のお仕事がしたいので、Progateを中心に学習を進めています。</p>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <div class="skill">
+    
+    <div class="skill-contents">
+      
+      <div id="skill-title">
+        
+        <a name="skill"><br></a>
+        <h2><br>SKILL</h2>
+        
+      </div>
+      
+      <h2>使用できる言語</h2>
+          
+        <ul>
+          <li>HTML/CSS</li>
+          <li>Javascript</li>
+        </ul>
+        
+      <h2>使用できるライブラリ</h2>
+      
+        <ul>
+          <li>Jquery</li>
+        </ul>
+      
+      <h2>勉強中の言語</h2>
+        <ul>
+          <li>Ruby</li>
+          <li>SQL</li>
+      </ul>
+                
+    </div>
+    
+  </div>
+  
+  <div class="portfolio">
+     
+    <div id="portfolio-title">
+      
+      <a name="portfolio"><br></a>
+      <h2><br>PORTFOLIO</h2>
+      
+    </div>
+    
+    <div class="folio">
+    
+      <section class="sec">
+    
+        <a href="portfolio.html">ポートフォリオファイル</a>
+        <p id="desc1"><br>『Template Party』で無料配布されている『個人サイト向けシンプル無料ホームページテンプレート tp_simple7』をベースに作成したWebページになります。<br>1からWebページを作成することもできますが、サンプルのカスタマイズも可能です。<br><br>クリックでサイトへ</p>
+      
+      </section>
+      
+    </div>
+    
+  </div>
+  
+  <div class="contact">
+  
+    <div class="contact-title">
+    
+      <a name="contact"></a>
+      <h2>CONTACT</h2>
+      
+      <p><br>何かありましたら以下のメールアドレスにご連絡をお願いいたします。</p>
+      <p>yamayamakou1234@gmail.com</p>
+    
+    </div>
+  
+  </div>
+  
+  <div class="top">
+  
+    <div class="top-btn">
+  
+      <a id="topbtn" href="#top">TOPに戻る</a>
+      
+    </div>
+  
+  </div>
+  
+  <footer>
+  
+    <ul class="footer-list">
+      <li><a href="#profile"><i class="far fa-file-alt"></i>PROFILE</a></li>
+      <li><a href="#skill"><i class="fas fa-wrench"></i>SKILL</a></li>
+      <li><a href="#portfolio"><i class="far fa-address-card"></i>PORTFOLIO</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i>CONTACT</a></li>
+    </ul>
+    
+    <p>Copyright©Kousei Yamagata. All Rights Reserved.</p>
+  
+  </footer>
+  
+  <script src="js/portfolio_js.js"></script>
+  
+</body>
+  
+</html>
+
+<script>
+$(function(){
+  $('.title').fadeIn(2000);
+  
+  // ヘッダーが一番上に来た場合に固定する
+  let head = $('header');
+  let fix = head.offset().top; // オブジェクトの高さを取得
+  $(window).scroll(function(){
+    if($(window).scrollTop() >= fix){
+      head.addClass('header-scroll');
+    }else{
+      head.removeClass('header-scroll');
+    }
+ });
+ 
+});
+//# sourceURL=userscript.js
+</script>
+</body>
+</html>
